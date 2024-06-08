@@ -1,6 +1,6 @@
 // src/components/UserList.js
 import React from 'react';
-import '../styles/UserList.css';
+import '../styles/UserForm.css';
 
 const UserList = ({ users }) => (
   <div className="user-list-container">

@@ -1,82 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 body {
-    background-color: #FDFFE2;
-  }
-  
-  h1 {
-    color: #1A2130;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .user-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #254336;
+}
+
+h1 {
+  color: #6B8A7A;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.user-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  margin: 10px;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.user-form .form-label {
+  color: #6B8A7A;
+}
+
+.user-form .form-control,
+.user-form .form-select {
+  background-color: #B7B597;
+  border: 1px solid #DAD3BE;
+}
+
+.user-form .btn-primary {
+  background-color: #667b59;
+  border: none;
+}
+
+.user-form .btn-primary:hover {
+  background-color: #6B8A7A;
+  color: rgb(37, 41, 37)
+}
+
+.user-form .mb-3 {
+  grid-column: span 2;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar-container .form-control {
+  width: 50%;
+  max-width: 400px;
+  background-color: #B7B597;
+  border: 1px solid #DAD3BE;
+}
+
+.user-list-container {
+  flex: 1;
+  margin: 10px;
+}
+
+.user-list-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background-color: #B7B597;
+  color: rgb(37, 41, 37);
+}
+
+.user-list-table th,
+.user-list-table td {
+  border: 1px solid #DAD3BE;
+  padding: 10px;
+  text-align: left;
+}
+
+.user-list-table th {
+  background-color: #DAD3BE;
+  color: rgb(37, 41, 37);
+}
+
+.user-list-table tr:nth-child(even) {
+  background-color: #6B8A7A;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-item .page-link {
+  background-color: #254336;
+  border: none;
+  color: white;
+}
+
+.page-item .page-link:hover {
+  background-color: #6B8A7A;
+  color: #FDFFE2;
+}
+
+.page-item.active .page-link {
+  background-color: #6B8A7A;
+  border: none;
+  color: #FDFFE2;
+}
+
+.page-item.disabled .page-link {
+  background-color: #e2fcff;
+  color: #A9A9A9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .main-content {
     flex-direction: column;
+    align-items: center;
   }
-  
+
   .user-form {
-    width: 100%;
-    max-width: 600px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
   }
-  
-  .user-form .form-label {
-    color: #1A2130;
-  }
-  
-  .user-form .form-control, .user-form .form-select {
-    background-color: #FDFFE2;
-    border: 1px solid #5A72A0;
-    color: #1A2130;
-  }
-  
-  .user-form .btn-primary {
-    background-color: #83B4FF;
-    border: none;
-    color: #1A2130;
-  }
-  
-  .user-form .btn-primary:hover {
-    background-color: #5A72A0;
-    color: #FDFFE2;
-  }
-  
-  .user-form .mb-3 {
-    grid-column: span 2;
-  }
-  
-  .error-message {
-    color: red;
-    text-align: center;
-  }
-  
-  .search-bar-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
+
   .search-bar-container .form-control {
-    width: 50%;
-    max-width: 400px;
-    background-color: #FDFFE2;
-    border: 1px solid #5A72A0;
-    color: #1A2130;
+    width: 80%;
   }
-  
-  @media (max-width: 768px) {
-    .user-form {
-      grid-template-columns: 1fr;
-    }
-  
-    .search-bar-container .form-control {
-      width: 80%;
-    }
-  
-    .user-list-table {
-      width: 100%;
-    }
+
+  .user-list-table {
+    width: 100%;
   }
+}

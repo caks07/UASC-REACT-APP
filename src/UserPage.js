@@ -40,25 +40,26 @@ const UsersPage = () => {
   };
 
   return (
-    <div className="container">
-    <h1>User Management</h1>
-    <h3>Search User</h3>
-    <div className="search-bar-container">
-      <SearchBar setSearchQuery={setSearchQuery} />
+       <div className="container">
+      <h1>User Management</h1>
+      <div className="search-bar-container">
+        <SearchBar setSearchQuery={setSearchQuery} />
+      </div>
+      <div className="main-content">
+        <div className="user-form-container">
+        <h3>Add User</h3>
+          <UserForm refreshUsers={refreshUsers} />
+        </div>
+        <div className="user-list-container">
+        <h3>Users</h3>
+          <UserList users={users.filter(user => user.name.toLowerCase().includes(searchQuery.toLowerCase()))} />
+        </div>
+      </div>
+      <div className="pagination-container">
+        <Pagination currentPage={currentPage} totalPages={totalPages} setPage={setCurrentPage} />
+      </div>
     </div>
-    <h3>Add New User</h3>
-    <div className="user-form-container">
-      <UserForm refreshUsers={refreshUsers} />
-    </div>
-    <h3>Users</h3>
-    <div className="user-list-container">
-      <UserList users={users.filter(user => user.name.toLowerCase().includes(searchQuery.toLowerCase()))} />
-    </div>
-    <div className="pagination-container">
-      <Pagination currentPage={currentPage} totalPages={totalPages} setPage={setCurrentPage} />
-    </div>
-  </div>
-);
+  );
 };
 
 export default UsersPage;
