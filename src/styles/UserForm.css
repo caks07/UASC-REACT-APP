@@ -53,3 +53,30 @@ body {
     text-align: center;
   }
   
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar-container .form-control {
+    width: 50%;
+    max-width: 400px;
+    background-color: #FDFFE2;
+    border: 1px solid #5A72A0;
+    color: #1A2130;
+  }
+  
+  @media (max-width: 768px) {
+    .user-form {
+      grid-template-columns: 1fr;
+    }
+  
+    .search-bar-container .form-control {
+      width: 80%;
+    }
+  
+    .user-list-table {
+      width: 100%;
+    }
+  }

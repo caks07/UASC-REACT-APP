@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Pagination.css';
 
 const Pagination = ({ currentPage, totalPages, setPage }) => {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);

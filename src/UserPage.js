@@ -5,6 +5,7 @@ import UserList from './components/UserList';
 import UserForm from './components/UserForm';
 import SearchBar from './components/SearchBar';
 import Pagination from './components/Paagination';
+import '../src/styles/UserPage.css'; 
 
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
@@ -39,16 +40,25 @@ const UsersPage = () => {
   };
 
   return (
-    <div>
-
-      <h1>User Management</h1>
-      
+    <div className="container">
+    <h1>User Management</h1>
+    <h3>Search User</h3>
+    <div className="search-bar-container">
       <SearchBar setSearchQuery={setSearchQuery} />
+    </div>
+    <h3>Add New User</h3>
+    <div className="user-form-container">
       <UserForm refreshUsers={refreshUsers} />
+    </div>
+    <h3>Users</h3>
+    <div className="user-list-container">
       <UserList users={users.filter(user => user.name.toLowerCase().includes(searchQuery.toLowerCase()))} />
+    </div>
+    <div className="pagination-container">
       <Pagination currentPage={currentPage} totalPages={totalPages} setPage={setCurrentPage} />
     </div>
-  );
+  </div>
+);
 };
 
 export default UsersPage;
