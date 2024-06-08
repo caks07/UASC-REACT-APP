@@ -1,0 +1,55 @@
+body {
+    background-color: #FDFFE2;
+  }
+  
+  h1 {
+    color: #1A2130;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .user-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .user-form {
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .user-form .form-label {
+    color: #1A2130;
+  }
+  
+  .user-form .form-control, .user-form .form-select {
+    background-color: #FDFFE2;
+    border: 1px solid #5A72A0;
+    color: #1A2130;
+  }
+  
+  .user-form .btn-primary {
+    background-color: #83B4FF;
+    border: none;
+    color: #1A2130;
+  }
+  
+  .user-form .btn-primary:hover {
+    background-color: #5A72A0;
+    color: #FDFFE2;
+  }
+  
+  .user-form .mb-3 {
+    grid-column: span 2;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  

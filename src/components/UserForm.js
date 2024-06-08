@@ -1,6 +1,7 @@
 // src/components/UserForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import '/styles/UserForm.css';
 
 const UserForm = ({ refreshUsers }) => {
   const [name, setName] = useState('');
